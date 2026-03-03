@@ -23,18 +23,22 @@ export default function App() {
   const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScLYs71_RK8q8i0aEXeGs_0lhtO1wiRLSvqB9iWlLlVRhIIqg/viewform?usp=header";
   const DEMO_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd4Bn3bNpGjuU6uL6xrxAsNSMj0Na-urcdF0YqcEXx4GE1lPg/viewform?usp=header";
 
+  const Logo = ({ className = "h-10", iconSize = 24 }: { className?: string, iconSize?: number }) => (
+    <div className={`flex items-center gap-3 ${className}`}>
+      <div className="flex aspect-square h-full items-center justify-center rounded-xl bg-indigo-900 text-white shadow-lg shadow-indigo-900/20">
+        <Scale size={iconSize} strokeWidth={2.5} />
+      </div>
+      <span className="text-xl font-bold tracking-tight text-indigo-900">Reglamia</span>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-emerald-100 selection:text-emerald-900">
       {/* Navigation */}
       <nav className="fixed top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="Reglamia Logo" 
-              className="h-12 w-auto" 
-              referrerPolicy="no-referrer" 
-            />
+            <Logo className="h-10" />
           </div>
 
           {/* Desktop Nav */}
@@ -376,12 +380,7 @@ export default function App() {
       <footer className="border-t border-slate-100 py-12">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <div className="flex items-center justify-center mb-6">
-            <img 
-              src="/logo.png" 
-              alt="Reglamia Logo" 
-              className="h-10 w-auto" 
-              referrerPolicy="no-referrer" 
-            />
+            <Logo className="h-8" iconSize={20} />
           </div>
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Reglamia. Todos los derechos reservados.
