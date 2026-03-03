@@ -28,11 +28,13 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-900 text-white shadow-lg shadow-indigo-900/20">
-              <Scale size={24} />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-indigo-900">Reglamia</span>
+          <div className="flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Reglamia Logo" 
+              className="h-12 w-auto" 
+              referrerPolicy="no-referrer" 
+            />
           </div>
 
           {/* Desktop Nav */}
@@ -373,9 +375,13 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-slate-100 py-12">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Scale size={20} className="text-indigo-900" />
-            <span className="font-bold text-indigo-900">Reglamia</span>
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/logo.png" 
+              alt="Reglamia Logo" 
+              className="h-10 w-auto" 
+              referrerPolicy="no-referrer" 
+            />
           </div>
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Reglamia. Todos los derechos reservados.
